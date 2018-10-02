@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01D1330DEA0FF81016B7C8B9 /* Pods_DepositSimulator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C185A4755E7C5FEFD117206 /* Pods_DepositSimulator.framework */; };
+		9353473A211296A6004D1756 /* AppIcon.appiconset in Resources */ = {isa = PBXBuildFile; fileRef = 93534739211296A6004D1756 /* AppIcon.appiconset */; };
+		93811E87211915D5007852D0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 93811E86211915D5007852D0 /* GoogleService-Info.plist */; };
 		93A6E9B820C1658600872A9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A6E9B720C1658600872A9A /* AppDelegate.swift */; };
 		93A6E9BA20C1658600872A9A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A6E9B920C1658600872A9A /* ViewController.swift */; };
 		93A6E9BD20C1658600872A9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93A6E9BB20C1658600872A9A /* Main.storyboard */; };
 		93A6E9BF20C1658700872A9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93A6E9BE20C1658700872A9A /* Assets.xcassets */; };
 		93A6E9C220C1658700872A9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93A6E9C020C1658700872A9A /* LaunchScreen.storyboard */; };
 		93A6E9CD20C1658700872A9A /* DepositSimulatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A6E9CC20C1658700872A9A /* DepositSimulatorTests.swift */; };
+		CE94CB11A54F0CF06D302F2D /* Pods_DepositSimulatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 020390BB262580A7996F884C /* Pods_DepositSimulatorTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +30,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		020390BB262580A7996F884C /* Pods_DepositSimulatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DepositSimulatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		05EDFFB794B239FD02B234D6 /* Pods-DepositSimulator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DepositSimulator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DepositSimulator/Pods-DepositSimulator.debug.xcconfig"; sourceTree = "<group>"; };
+		0C6C6E4B26550D0420229AE2 /* Pods-DepositSimulatorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DepositSimulatorTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DepositSimulatorTests/Pods-DepositSimulatorTests.release.xcconfig"; sourceTree = "<group>"; };
+		368D33A1CF6312649592455B /* Pods-DepositSimulator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DepositSimulator.release.xcconfig"; path = "Pods/Target Support Files/Pods-DepositSimulator/Pods-DepositSimulator.release.xcconfig"; sourceTree = "<group>"; };
+		7C185A4755E7C5FEFD117206 /* Pods_DepositSimulator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DepositSimulator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93534739211296A6004D1756 /* AppIcon.appiconset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AppIcon.appiconset; sourceTree = "<group>"; };
+		93811E86211915D5007852D0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		93A6E9B420C1658600872A9A /* DepositSimulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DepositSimulator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93A6E9B720C1658600872A9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93A6E9B920C1658600872A9A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +47,7 @@
 		93A6E9C820C1658700872A9A /* DepositSimulatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DepositSimulatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		93A6E9CC20C1658700872A9A /* DepositSimulatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepositSimulatorTests.swift; sourceTree = "<group>"; };
 		93A6E9CE20C1658700872A9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCBB52A86B88B3E46A3D5447 /* Pods-DepositSimulatorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DepositSimulatorTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DepositSimulatorTests/Pods-DepositSimulatorTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01D1330DEA0FF81016B7C8B9 /* Pods_DepositSimulator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,18 +63,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE94CB11A54F0CF06D302F2D /* Pods_DepositSimulatorTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1038174A09C07238FDF3F38F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				05EDFFB794B239FD02B234D6 /* Pods-DepositSimulator.debug.xcconfig */,
+				368D33A1CF6312649592455B /* Pods-DepositSimulator.release.xcconfig */,
+				BCBB52A86B88B3E46A3D5447 /* Pods-DepositSimulatorTests.debug.xcconfig */,
+				0C6C6E4B26550D0420229AE2 /* Pods-DepositSimulatorTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4ED1A74531ABD93C1CA3373A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7C185A4755E7C5FEFD117206 /* Pods_DepositSimulator.framework */,
+				020390BB262580A7996F884C /* Pods_DepositSimulatorTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		93A6E9AB20C1658600872A9A = {
 			isa = PBXGroup;
 			children = (
 				93A6E9B620C1658600872A9A /* DepositSimulator */,
 				93A6E9CB20C1658700872A9A /* DepositSimulatorTests */,
 				93A6E9B520C1658600872A9A /* Products */,
+				1038174A09C07238FDF3F38F /* Pods */,
+				4ED1A74531ABD93C1CA3373A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,6 +119,8 @@
 				93A6E9BE20C1658700872A9A /* Assets.xcassets */,
 				93A6E9C020C1658700872A9A /* LaunchScreen.storyboard */,
 				93A6E9C320C1658700872A9A /* Info.plist */,
+				93811E86211915D5007852D0 /* GoogleService-Info.plist */,
+				93534739211296A6004D1756 /* AppIcon.appiconset */,
 			);
 			path = DepositSimulator;
 			sourceTree = "<group>";
@@ -103,9 +141,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 93A6E9D120C1658700872A9A /* Build configuration list for PBXNativeTarget "DepositSimulator" */;
 			buildPhases = (
+				A377AA5DFE13A8ECE978646D /* [CP] Check Pods Manifest.lock */,
 				93A6E9B020C1658600872A9A /* Sources */,
 				93A6E9B120C1658600872A9A /* Frameworks */,
 				93A6E9B220C1658600872A9A /* Resources */,
+				9D12DEF12A67423457AA049C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -120,6 +160,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 93A6E9D420C1658700872A9A /* Build configuration list for PBXNativeTarget "DepositSimulatorTests" */;
 			buildPhases = (
+				3A86AEFD9E2248EAA93B8186 /* [CP] Check Pods Manifest.lock */,
 				93A6E9C420C1658700872A9A /* Sources */,
 				93A6E9C520C1658700872A9A /* Frameworks */,
 				93A6E9C620C1658700872A9A /* Resources */,
@@ -177,7 +218,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9353473A211296A6004D1756 /* AppIcon.appiconset in Resources */,
 				93A6E9C220C1658700872A9A /* LaunchScreen.storyboard in Resources */,
+				93811E87211915D5007852D0 /* GoogleService-Info.plist in Resources */,
 				93A6E9BF20C1658700872A9A /* Assets.xcassets in Resources */,
 				93A6E9BD20C1658600872A9A /* Main.storyboard in Resources */,
 			);
@@ -191,6 +234,65 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3A86AEFD9E2248EAA93B8186 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DepositSimulatorTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D12DEF12A67423457AA049C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DepositSimulator/Pods-DepositSimulator-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DepositSimulator/Pods-DepositSimulator-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A377AA5DFE13A8ECE978646D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DepositSimulator-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		93A6E9B020C1658600872A9A /* Sources */ = {
@@ -356,10 +458,13 @@
 		};
 		93A6E9D220C1658700872A9A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05EDFFB794B239FD02B234D6 /* Pods-DepositSimulator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UAF87342VZ;
 				INFOPLIST_FILE = DepositSimulator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -373,10 +478,13 @@
 		};
 		93A6E9D320C1658700872A9A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 368D33A1CF6312649592455B /* Pods-DepositSimulator.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UAF87342VZ;
 				INFOPLIST_FILE = DepositSimulator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -390,6 +498,7 @@
 		};
 		93A6E9D520C1658700872A9A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCBB52A86B88B3E46A3D5447 /* Pods-DepositSimulatorTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -410,6 +519,7 @@
 		};
 		93A6E9D620C1658700872A9A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C6C6E4B26550D0420229AE2 /* Pods-DepositSimulatorTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
