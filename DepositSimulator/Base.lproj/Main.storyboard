@@ -110,7 +110,11 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="cok-iw-EB5"/>
-                                    <barButtonItem systemItem="action" id="QKv-xF-2cz"/>
+                                    <barButtonItem systemItem="action" id="QKv-xF-2cz">
+                                        <connections>
+                                            <action selector="ButtonAction:" destination="BYZ-38-t0r" id="3S8-Vh-gum"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="n4F-iw-OWZ"/>
                                 </items>
                             </toolbar>

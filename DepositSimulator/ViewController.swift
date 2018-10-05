@@ -13,6 +13,10 @@ class ViewController: UIViewController, UITextFieldDelegate,GADBannerViewDelegat
 
     var bannerView: GADBannerView!
     
+    @IBAction func ButtonAction(_ sender: Any) {
+        
+    }
+    
     @IBOutlet weak var years: UILabel!
     
 
