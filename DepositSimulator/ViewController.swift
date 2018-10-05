@@ -18,15 +18,32 @@ class ViewController: UIViewController, UITextFieldDelegate,GADBannerViewDelegat
     }
     
     @IBOutlet weak var years: UILabel!
-    
-
-    @IBOutlet weak var target: UITextField!
-    @IBOutlet weak var now: UITextField!
-    @IBOutlet weak var reserve: UITextField!
-
+    @IBOutlet weak var target: UITextField!{
+        didSet {
+            target?.addDoneCancelToolbar(onDone: (target: self, action: #selector(doneButtonTappedForTarget)))
+        }
+    }
+    @IBOutlet weak var now: UITextField!{
+        didSet {
+            now?.addDoneCancelToolbar(onDone: (target: self, action: #selector(doneButtonTappedForNow)))
+        }
+    }
+    @IBOutlet weak var reserve: UITextField!{
+        didSet {
+            reserve?.addDoneCancelToolbar(onDone: (target: self, action: #selector(doneButtonTappedForReserve)))
+        }
+    }
+    @objc func doneButtonTappedForTarget() {
+        target.resignFirstResponder()
+    }
+    @objc func doneButtonTappedForNow() {
+        now.resignFirstResponder()
+    }
+    @objc func doneButtonTappedForReserve() {
+        reserve.resignFirstResponder()
+    }
     @IBOutlet weak var reaching: UILabel!
     
-    @IBOutlet weak var calButton: UIButton!
     // UserDefaults のインスタンス
     let userDefaults = UserDefaults.standard
     
@@ -50,7 +67,7 @@ class ViewController: UIViewController, UITextFieldDelegate,GADBannerViewDelegat
         
         self.target.keyboardType = UIKeyboardType.numberPad
         self.now.keyboardType = UIKeyboardType.numberPad
-        self.reserve.keyboardType = UIKeyboardType.numberPad
+        self.reserve.keyboardType = UIKeyboardType.decimalPad
         target.delegate = self
         now.delegate = self
         reserve.delegate = self
@@ -104,29 +121,29 @@ class ViewController: UIViewController, UITextFieldDelegate,GADBannerViewDelegat
         // データの同期
         userDefaults.synchronize()
         
-        let resultTarget:Int? = Int(target.text!)
-        let resultNow:Int? = Int(now.text!)
-        let resultReserve:Int? = Int(reserve.text!)
+        let resultTarget:Float? = Float(target.text!)
+        let resultNow:Float? = Float(now.text!)
+        let resultReserve:Float? = Float(reserve.text!)
         
         if resultTarget != nil && resultNow != nil && resultReserve != nil {
             
             if resultReserve != 0{
-                var month = ((resultTarget!-resultNow!)/resultReserve!)
+                var month = (Int)(ceil((resultTarget!-resultNow!)/resultReserve!))
                 let year = month / 12
                 month = month % 12
                 years.text = String(year) + "年" + String(month) + "か月"
-                let text:String = "半年後："+String(resultNow! + 6 * resultReserve!)+"万円"
-                    + "\n１年後："+String(resultNow! + 12 * resultReserve!)+"万円"
-                    + "\n２年後："+String(resultNow! + 2*12 * resultReserve!)+"万円"
-                    + "\n３年後："+String(resultNow! + 3*12 * resultReserve!)+"万円"
-                    + "\n４年後："+String(resultNow! + 4*12 * resultReserve!)+"万円"
-                    + "\n５年後："+String(resultNow! + 5*12 * resultReserve!)+"万円"
-                    + "\n１０年後："+String(resultNow! + 10*12 * resultReserve!)+"万円"
-                    + "\n１５年後："+String(resultNow! + 15*12 * resultReserve!)+"万円"
-                    + "\n２０年後："+String(resultNow! + 20*12 * resultReserve!)+"万円"
-                    + "\n３０年後："+String(resultNow! + 30*12 * resultReserve!)+"万円"
-                    + "\n４０年後："+String(resultNow! + 40*12 * resultReserve!)+"万円"
-                    + "\n５０年後："+String(resultNow! + 50*12 * resultReserve!)+"万円"
+                let text:String = "半年後："+String((Int)(resultNow! + 6 * resultReserve!))+"万円"
+                    + "\n１年後："+String((Int)(resultNow! + 12 * resultReserve!))+"万円"
+                    + "\n２年後："+String((Int)(resultNow! + 2*12 * resultReserve!))+"万円"
+                    + "\n３年後："+String((Int)(resultNow! + 3*12 * resultReserve!))+"万円"
+                    + "\n４年後："+String((Int)(resultNow! + 4*12 * resultReserve!))+"万円"
+                    + "\n５年後："+String((Int)(resultNow! + 5*12 * resultReserve!))+"万円"
+                    + "\n１０年後："+String((Int)(resultNow! + 10*12 * resultReserve!))+"万円"
+                    + "\n１５年後："+String((Int)(resultNow! + 15*12 * resultReserve!))+"万円"
+                    + "\n２０年後："+String((Int)(resultNow! + 20*12 * resultReserve!))+"万円"
+                    + "\n３０年後："+String((Int)(resultNow! + 30*12 * resultReserve!))+"万円"
+                    + "\n４０年後："+String((Int)(resultNow! + 40*12 * resultReserve!))+"万円"
+                    + "\n５０年後："+String((Int)(resultNow! + 50*12 * resultReserve!))+"万円"
                 reaching.text = text
             }
         }
@@ -146,10 +163,10 @@ class ViewController: UIViewController, UITextFieldDelegate,GADBannerViewDelegat
         view.addSubview(bannerView)
         view.addConstraints(
             [NSLayoutConstraint(item: bannerView,
-                                attribute: .bottom,
-                                relatedBy: .equal,
-                                toItem: bottomLayoutGuide,
                                 attribute: .top,
+                                relatedBy: .equal,
+                                toItem: topLayoutGuide,
+                                attribute: .bottom,
                                 multiplier: 1,
                                 constant: 0),
              NSLayoutConstraint(item: bannerView,
@@ -163,3 +180,19 @@ class ViewController: UIViewController, UITextFieldDelegate,GADBannerViewDelegat
     }
 }
 
+extension UITextField {
+    func addDoneCancelToolbar(onDone: (target: Any, action: Selector)? = nil, onCancel: (target: Any, action: Selector)? = nil) {
+        let onDone = onDone ?? (target: self, action: #selector(doneButtonTapped))
+        let toolbar: UIToolbar = UIToolbar()
+        toolbar.barStyle = .default
+        toolbar.items = [
+            UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil),
+            UIBarButtonItem(title: "Done", style: .done, target: onDone.target, action: onDone.action)
+        ]
+        toolbar.sizeToFit()
+        self.inputAccessoryView = toolbar
+    }
+    
+    // Default actions:
+    @objc func doneButtonTapped() { self.resignFirstResponder() }
+}
